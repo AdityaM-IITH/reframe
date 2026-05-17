@@ -130,7 +130,7 @@ export default function VideoEditor() {
     {/* Brightness */}
     <div className="space-y-2">
       <div className="flex items-center justify-between text-xs">
-        <span>Brightness</span>
+        <label htmlFor="brightness-slider">Brightness</label>
 
         <button
           type="button"
@@ -142,6 +142,7 @@ export default function VideoEditor() {
       </div>
 
       <input
+        id="brightness-slider"
         type="range"
         min="-1"
         max="1"
@@ -152,6 +153,7 @@ export default function VideoEditor() {
             brightness: Number(e.target.value),
           })
         }
+        aria-label="Adjust brightness"
         className="w-full"
       />
     </div>
@@ -159,7 +161,7 @@ export default function VideoEditor() {
     {/* Contrast */}
     <div className="space-y-2">
       <div className="flex items-center justify-between text-xs">
-        <span>Contrast</span>
+        <label htmlFor="contrast-slider">Contrast</label>
 
         <button
           type="button"
@@ -171,6 +173,7 @@ export default function VideoEditor() {
       </div>
 
       <input
+        id="contrast-slider"
         type="range"
         min="0"
         max="2"
@@ -181,6 +184,7 @@ export default function VideoEditor() {
             contrast: Number(e.target.value),
           })
         }
+        aria-label="Adjust contrast"
         className="w-full"
       />
     </div>
@@ -188,7 +192,7 @@ export default function VideoEditor() {
     {/* Saturation */}
     <div className="space-y-2">
       <div className="flex items-center justify-between text-xs">
-        <span>Saturation</span>
+        <label htmlFor="saturation-slider">Saturation</label>
 
         <button
           type="button"
@@ -200,6 +204,7 @@ export default function VideoEditor() {
       </div>
 
       <input
+        id="saturation-slider"
         type="range"
         min="0"
         max="3"
@@ -210,6 +215,7 @@ export default function VideoEditor() {
             saturation: Number(e.target.value),
           })
         }
+        aria-label="Adjust saturation"
         className="w-full"
       />
     </div>
